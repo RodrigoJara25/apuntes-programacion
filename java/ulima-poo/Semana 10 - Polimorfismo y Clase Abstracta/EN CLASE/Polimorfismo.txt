@@ -1,0 +1,28 @@
+POLIMORFISMO:
+
+-El polimorfismo funciona en una jerarquía (HERENCIA).
+
+-En POO se refiere al hecho de que un mismo identificador se puede
+comportar de diferentes formas, dependiendo del objeto.
+
+-Con un mismo objeto puedo decirle que se comprte como distintos objetos de una herencia (jerarquía).
+
+
+CONVERSIÓN IMPLÍCITA: como un dato más pequeño pasa a uno más grande (no pierdes datos)
+
+CONVERSIÓN EXPLÍCITA: como un dato más grande pasa a uno más pequeño (pierdes datos)
+
+
+CLASE ABSTRACTA:
+
+-No se pueden crear objetos de una clase abstracta.
+
+-Tiene métodos abstractos (métodos polimórficos): los cuales tienen su declaración en la SuperClase, pero la definición de ese método está en la SubClase.
+
+-En una clase abstracta hay UNO o NINGÚN método abstracto. Con declarar un método abstracto, ya la clase se vuelve abstracta.
+
+-Una clase abstracta puede servir de padre para otras clases.
+
+
+COINCIDENCIA:
+-El método abstracto y el método polimórfico son OVERRIDES.

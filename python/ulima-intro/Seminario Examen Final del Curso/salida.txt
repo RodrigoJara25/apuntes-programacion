@@ -1,0 +1,15 @@
+Alberto,7
+Carla,5
+Dora,4
+Eduardo,7
+Jorge,5
+Juan,4
+Luis,4
+Maria,5
+Paola,5
+Pedro,5
+Percy,5
+Rebeca,6
+Ricardo,7
+Rosa,4
+Vicor,5

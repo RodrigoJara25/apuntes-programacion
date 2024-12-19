@@ -1,0 +1,2 @@
+CONSTRUCTOR: En el constructor van todos los atributos que no se calculan, si no que
+tienen que ser proporcionados por el usuario.

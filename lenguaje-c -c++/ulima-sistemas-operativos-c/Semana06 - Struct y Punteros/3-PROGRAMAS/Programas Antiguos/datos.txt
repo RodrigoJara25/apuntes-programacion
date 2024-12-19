@@ -1,0 +1,11 @@
+10
+09797675	jose	cardenas	45
+10235732	mario	perez	46
+20876415	daniel	soto	40
+08724661	miguel	conde	55
+11982342	edson	perez	35
+09797675	jose	cardenas	45
+10235732	mario	perez	46
+20876415	daniel	soto	40
+08724661	miguel	conde	55
+11982342	edson	perez	35

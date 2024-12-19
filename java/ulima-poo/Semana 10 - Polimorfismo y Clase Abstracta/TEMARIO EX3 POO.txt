@@ -1,0 +1,15 @@
+TEMARIO EX3 POO
+----------------------------
+No viene:
+[ ] Matrices
+[ ] Arreglos primitivos 
+
+Viene:
+[ ] Todo lo anterior
+[ ] Random con rango
+[ ] Par e impar
+
+[ ] Arreglo de objetos 
+[ ] Herencia 
+[ ] Clases abstractas 
+[ ] Recorrido de arreglos de objetos (con SuperClases y SubClases)

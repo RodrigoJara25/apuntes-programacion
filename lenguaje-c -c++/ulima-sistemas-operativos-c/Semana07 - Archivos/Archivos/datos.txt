@@ -1,0 +1,6 @@
+5
+09797675	jose	cardenas	45	28/09/1978	M
+10235732	mario	perez	46	28/10/1979	M
+20876415	daniel	soto	40	20/11/1981	M
+08724661	miguel	conde	55	11/04/1983	M
+11982342	edson	perez	35	23/05/1985	M

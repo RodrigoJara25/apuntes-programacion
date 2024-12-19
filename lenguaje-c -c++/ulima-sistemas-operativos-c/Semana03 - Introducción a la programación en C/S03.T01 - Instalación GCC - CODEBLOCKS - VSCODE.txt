@@ -1,0 +1,26 @@
+--------------------------------
+COMPILADOR
+--------------------------------
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt -y install build-essential
+gcc --version
+--------------------------------
+CODEBLOCKS
+--------------------------------
+sudo apt install -y codeblocks
+sudo apt install -y codeblocks-contrib
+--------------------------------
+VSCODE
+--------------------------------
+sudo apt -y install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt -y install code
+sudo apt-get -y update
+sudo apt-get -y upgrade
+--------------------------------
+EXTENSIÓN C/C++
+--------------------------------
+Seleccionar el ícono Extensions
+Seleccionar C/C++

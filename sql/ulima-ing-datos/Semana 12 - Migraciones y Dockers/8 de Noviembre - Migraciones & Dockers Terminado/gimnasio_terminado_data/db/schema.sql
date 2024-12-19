@@ -1,0 +1,34 @@
+CREATE TABLE IF NOT EXISTS "schema_migrations" (version varchar(128) primary key);
+CREATE TABLE objetivos (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  nombre VARCHAR(25)
+);
+CREATE TABLE niveles (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  nombre VARCHAR(25)
+);
+CREATE TABLE cuerpo_partes (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  nombre VARCHAR(20)
+);
+CREATE TABLE miembros (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombres VARCHAR(30), apellidos VARCHAR(30), codigo INT);
+CREATE TABLE usuarios (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  nombre VARCHAR(20),
+  correo VARCHAR(30),
+  contrasenia VARCHAR(50),
+  miembro_id INTEGER,
+  FOREIGN KEY (miembro_id) REFERENCES miembros (id)
+);
+-- Dbmate schema migrations
+INSERT INTO "schema_migrations" (version) VALUES
+  ('20241029153717'),
+  ('20241029154101'),
+  ('20241029154137'),
+  ('20241029155709'),
+  ('20241029160957'),
+  ('20241029162937'),
+  ('20241029163818'),
+  ('20241029165130'),
+  ('20241029171021');
