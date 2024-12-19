@@ -1,0 +1,24 @@
+.mi-css-table{
+    background-color: #f6f6f6;
+    height: 40px;
+    border: 0.5px solid gray;
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
+
+.mi-css-imagen{
+    height: 150px;
+    width: max-content;
+    cursor: pointer;
+}
+
+h5.text-center{
+    cursor: pointer;
+}
+
+.btn-netzun{
+    background-color: #C5E1A5;
+    border-radius: #C5E1A5;
+    color: #ffff;
+}

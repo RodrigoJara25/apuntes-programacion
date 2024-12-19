@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagina con Bootstrap</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Mi css -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <main>
+
+    <div class="container mb-5">
+      
+
+      <form class="mt-5 form-netzun">
+        <h1 class="display-6">Incripcion al curso de Programacion</h1>
+
+        <div class="row mt-3">
+          <div class="col-12 col-md-6">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre">
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="apellidos" class="form-label">Apellidos:</label>
+            <input type="text" class="form-control" id="apellidos">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-12 col-md-6">
+            <label for="dni" class="form-label">DNI:</label>
+            <input type="text" class="form-control" id="dni">
+          </div>
+          <div class="col-12 col-md-6">
+            <label for="telefono" class="form-label">Telefono:</label>
+            <input type="text" class="form-control" id="telefono">
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-12">
+            <label class="form-label">Correo Electronico:</label>
+            <!-- Componente de Bootstrap (Input group) -->
+            <div class="input-group">
+              <span class="input-group-text">@</span>
+              <input type="text" class="form-control" placeholder="Correo Electornico" aria-describedby="emailDescripcion">
+            </div>
+            <div id="emailDescripcion" class="form-text">
+              No compartiremos tu correo con personas ajenas
+            </div>
+          </div>
+        </div>
+
+        <label class="form-label w-100 mt-3">Genero:</label>
+        <!-- Componente de Bootstrap (Check & Radios) -->
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          <label class="form-check-label" for="inlineRadio1">Masculino</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Femenino</label>
+        </div>
+
+        <div class="w-100"></div>
+
+        <label class="form-label w-100 mt-3">Cursos de Interes:</label>
+        <!-- Componente de Bootstrap (Check & Radios) -->
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="checkbox-html" value="option1">
+          <label class="form-check-label" for="checkbox-html">HTML</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="checkbox-css" value="option2">
+          <label class="form-check-label" for="checkbox-css">CSS</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="checkbox-js" value="option2">
+          <label class="form-check-label" for="checkbox-js">JavaScript</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="checkbox-python" value="option2">
+          <label class="form-check-label" for="checkbox-python">Python</label>
+        </div>
+
+        <div class="mt-3">
+          <label for="interesCurso" class="form-label">Por que esta interesado en los cursos que ha selecionado?</label>
+          <textarea class="form-control" id="interesCurso" rows="3"></textarea>
+        </div>
+
+        <div class="w-100"></div>
+        
+        <div class="text-end w-100">
+          <button type="button" class="btn btn-primary mt-3">Enviar</button>
+        </div>
+      </form>
+
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.mi-css-table{
+    background-color: #f6f6f6;
+    height: 40px;
+    border: 0.5px solid gray;
+    display: flex;
+    place-items: center;
+    place-content: center;
+}
