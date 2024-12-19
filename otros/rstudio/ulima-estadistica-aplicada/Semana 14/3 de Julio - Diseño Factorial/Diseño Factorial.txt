@@ -1,0 +1,40 @@
+
+library(ggpubr)
+library(agricolae)
+#------------------------------------------------------------------#
+#                    FACTORIAL DCA SIMPLE                          #
+#------------------------------------------------------------------#
+dat<-read.delim("clipboard")
+head(dat)
+dat$Procesador <- factor(dat$Procesador)
+dat$Arquitectura <- factor(dat$Arquitectura)
+#------------------------------------------------------------------#
+#                        Preba de Shapiro Wilk                     #
+#------------------------------------------------------------------#
+shapiro.test(rstandard(aov(Velocidad ~ Procesador*Arquitectura,data=dat)))
+
+#------------------------------------------------------------------#
+#                  Pruebas de homogeneidad de varianzas            #
+#------------------------------------------------------------------#
+library(car)
+ncvTest(lm(Velocidad ~ Procesador*Arquitectura,data=dat))
+
+#------------------------------------------------------------------#
+#                         Análisis de varianza                     #
+#------------------------------------------------------------------#
+modelo=aov(lm(Velocidad ~ Procesador*Arquitectura,data=dat))
+summary(modelo)
+
+#------------------------------------------------------------------#
+#                          Comparaciones múltiples                 #
+#------------------------------------------------------------------#
+
+library(agricolae)
+
+b=HSD.test(aov(Velocidad ~ Procesador*Arquitectura,data=dat),
+           c("Procesador","Arquitectura"),group=FALSE)[4]
+b
+
+a=HSD.test(aov(Velocidad ~ Procesador*Arquitectura,data=dat ),
+           c("Procesador","Arquitectura"),group=TRUE)[5]
+a

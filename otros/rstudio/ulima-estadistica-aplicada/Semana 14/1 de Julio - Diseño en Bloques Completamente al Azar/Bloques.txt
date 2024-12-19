@@ -1,0 +1,31 @@
+dat <- read.delim("clipboard")
+dat
+
+# H0: u1=u2=u3=u4=u5
+# h1: Al menos un ui es diferente
+
+modelo1 <- lm(Tiempo~ Método + Bloque, data=dat)
+anova(modelo1)
+
+# supuestos --------
+# H0: Los errores se distribuyen normalmente
+# H1: Los errores no se distribuyen normalmente
+
+shapiro.test(modelo1$residuals)
+
+# H0: Los errores tienen varianza constante (homogenidad)
+# H1: Los errores no tienen varianza constante (no homogenidad)
+library(car)
+ncvTest(modelo1)
+
+
+# COMPARACIONES MÚLTIPLES -------------------------------------------------
+# Método de Tukey
+tapply(dat$Tiempo, dat$Método, mean)
+TukeyHSD(aov(modelo1), conf.level = 0.95)
+
+# H0: UA = UB
+# H1: UA dif UB
+
+
+plot(TukeyHSD(aov(modelo1), conf.level = 0.95))
