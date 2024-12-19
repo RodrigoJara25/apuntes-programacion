@@ -1,0 +1,33 @@
+header{
+    @include flex_dinamico(row, center, center, 40px);
+    padding: 20px 30px;
+    background-color: map-get($map: $colores_sitio, $key: color3);
+    div{
+        img{
+            width: 4rem;
+        }
+    }
+    nav{
+        ul{
+            display: flex;
+            gap: 1.25rem;
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: $color_texto;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+/*
+function saludo(nombre, apellido){      => parametro
+
+}
+
+saludo(Pedro, Suarez) => argumento
+
+*/

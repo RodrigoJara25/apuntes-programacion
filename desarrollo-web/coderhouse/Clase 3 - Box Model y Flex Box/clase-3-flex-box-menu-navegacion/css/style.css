@@ -1,0 +1,222 @@
+/* Reset CLASS: para eliminar esos espacios en blanco que vienen por defecto en cada navegador */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    background-color: lightslategray;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+header div{
+    width: 10%;
+}
+
+header div img{
+    width: 100%;
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* 
+    max-heigh   min-heigh
+    max-width   min-width
+    */
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+    /* Para que no quede muy pegado a la derecha, ahi si se puede usar box model */
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+}
+
+.banner{
+    width: 100%;
+    height: 600px;
+    background-image: url("../assets/imagenes/image-banner-index.jpg");
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+}
+
+.banner div{
+    width: 400px;
+}
+
+.banner h1{
+    margin-bottom: 10px;
+}
+
+.banner div p{
+    padding: 20px 0px;
+    background-color: rgba(0, 0, 0, 0.053);
+}
+/* Convertir una imagen con medidas absolitas a medidas relativas */
+/* Para hacer esto, al div le declaras una medida absoluta para definir su tamaño (200px) y luego a la img le asignas que su tamaño sea del 100% */
+
+.card-container{
+    width: 250px;
+    height: 300px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+/* Primero declaramos una medida absoluta height = 200px*/
+.card-container div{
+    width: 100%;
+    height: 200px;
+}
+
+/* Despues, usamos una medida relativa  height = 100% */
+.card-container div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.card-container h3{
+    padding-top: 20px;
+} 
+
+/* DISPLAY */
+/* todas las etieuqteas con medidas absolutas, pierden esta propiedad y se vuelven relativos */
+/* Si ponemos que .container-productos es flex, entonces, automaticamente, todas las etiquetas hijas se vuelven flex */
+.container-productos{
+    display: flex;
+    /* 
+    flex-direction
+    flex-wrap 
+    */
+}
+
+/* ADVERTENCIA */
+/* Si achicamos mucho un contenedor, puede ocurrir desbordamiento */
+
+/* flex-direction: da la direccion para acomodar las etiquetas (row, row-reverse, column, column-reverse) */
+.container-productos{
+    flex-direction: row;
+}
+
+/* flex-wrap : permite a los componentes adpartse de mejor manera a los navgeadores */
+/* Cuando ya no hay espacio para que las etiquetas esten con su tamaño asigando, entonces
+pasa hacia la siguiente fila */
+/* primer paso : para hacer responsive nuestra pagina a diferentes dispositivos */
+.container-productos{
+    flex-wrap: wrap;
+}
+
+/* ACOMODAR LOS COMPONENTES */
+/* Para row (horizontal) : justify-content */
+/* Para column (vertical) : align items */
+.container-productos{
+    justify-content: flex-start;    /*empezando desde la izquierda, aplica flex*/
+    justify-content: center;        /*empezando desde el medio, aplica flex*/
+    justify-content: flex-end;      /*empezando desde la izquierda, aplica flex*/
+    justify-content: space-between; /*desde los lados, separa los elementos del medio a igual distancia*/
+    justify-content: space-around;  /*a los extremos, deja el 50% de espacio que deja entre los componentes del centro*/
+    justify-content: space-evenly;  /*aplica un flex perfecto, deja la misma distancia entre todos los componentes*/
+}
+
+.container-productos{
+    align-items: flex-start;
+    align-items: center;
+    align-items: flex-end;
+}
+
+/* 
+Si usamos flex-start, center o flex-end podemos tener mayor control para hacer la separación que queramos
+*/
+/* 
+Usamos la propiedad GAP para generar espacio horizontal y vertical entre los elementos de un contenedor. Esta es una propiedad de flex-box
+Ya box-modeling se usa solo para detalles.
+*/
+.container-productos{
+    display: flex;
+
+    /* width: 800px;  /* Si no queremosque el div ocupe todo el ancho de la section, le asiganmos una medidad al width */
+    height: 600px;
+    background-color: black;
+    /* margin: auto;  /* Para centrar el contenedor al medio de la página. Solo se usa cuando el contenedor no va ocupar todo el espacio de su contenedor*/
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    /* GAP : espaciado entre componentes (50px vertical y 50px horizontal)*/
+    gap: 50px;
+}
+
+
+/* PROPIEDAD PARA HIJOS EN FLEX BOX */
+
+/* 
+A cada hijo, se le puede asignar una class adicional para diferenciarlos.
+Asi, todos van a compartir las porpiedades de card-container, pero van a tener sus propiedades individuales tambien.
+*/
+.article1{
+    background-color: lightgreen;
+    /* alig-self : nos permite mover independientemente este article en el eje vertical */
+    align-self: flex-start;
+}
+
+.article2{
+    background-color: lightpink;
+}
+
+.article3{
+    background-color: lightyellow;
+    align-self: flex-end;
+}
+
+.article4{
+    background-color: lightskyblue;
+}
+
+/* 
+ETIQUETA ORDER : 
+sirve para reordenar el orden de los componentes según la cercania a la etiqueta padre (en este caso el div)
+en este caso: 
+- article = hijo
+- div = padre 
+*/
+.article1{
+    order: 3;
+}
+
+.article2{
+    order: 2;
+}
+
+.article3{
+    order: 1;
+}
+
+.article4{
+    order: 4;
+}

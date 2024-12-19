@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/*
+siempre tenemos que llamar primero a los partials que estan en utilities
+*/
+/*
+
+variable = espacio de memoria reservado para almacenar un tipo de dato,
+este tipo de dato puede variar.
+
+En CSS se pueden declarar variables
+:roor => esto sirve solamente para css.
+:root{
+    --color-primario: red;
+
+}
+
+Pero no lo usamos mucho, porque hacen más pesados los CSS
+Pero si usamos variables a través de SCSS, al ser un pre-procesador,
+y al devolver todo en CSS limpio, no fuerza nada.
+
+*/
+/*
+cuando tenemos colecciones de valores que son iguales
+(todos son colores, todos son tamaños (px), todos son %)
+podemos utilizar maps,
+*/
+/*
+las funciones nos pemriten a nostros generar bloques de codigo
+que cumplen una determinada orden
+
+los mixin funcionan igual, los mixin poseen propiedas que 
+trabajn en conjunto para cumplir una determinada orden
+
+estatico: el mixing cumple una funcion dada por el programador
+dinamico: el mixing va modificandose dependiendo los valores que aplique el programador
+
+@mixing "nombre_mixing"{
+
+    propiedades
+}
+*/
+/*
+se llama todo lo que este en base
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+llamamos a todo lo que esté en layout
+*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 30px;
+  background-color: black;
+}
+header div img {
+  width: 4rem;
+}
+header nav ul {
+  display: flex;
+  gap: 1.25rem;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(229, 244, 20);
+  font-size: 25px;
+}
+
+/*
+function saludo(nombre, apellido){      => parametro
+
+}
+
+saludo(Pedro, Suarez) => argumento
+
+*/
+.main-index {
+  background-color: gray;
+}
+.main-index .section-principal h1 {
+  text-align: center;
+  color: red;
+  font-size: 2rem;
+}
+
+/*
+EXTENDS: volver a utilizar un bloque de codigo de css
+
+Ejem: tengo otra clase quiero que tenga las mismas propiedades, pero que cambie solo el color
+*/
+.ejemplo1, .ejemplo2, .ejemplo3 {
+  background-color: blue;
+  font-size: 1.875rem;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  box-shadow: 2px 2px 2px black;
+}
+
+.ejemplo2, .ejemplo3 {
+  color: black;
+}
+
+.ejemplo3 {
+  text-align: right;
+}
+
+/*
+los componentes
+*/
+/*
+siempre al final, los mediaquery
+si hacemos desde desktop hacia mobile, el orden de los MQ es de manera creciente
+Si hacemos de mobile a desktop, el orden es de manera decreciente
+*/
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5px;
+    background-color: rgba(135, 206, 250, 0.293);
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+}
+
+/* focus : cuando está seleccionado un input de formulario */
+input:focus{
+    all:unset;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: white;
+}
+
+header div img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.navbar{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li a{
+    font-size: 20px;
+    font-family: monospace;
+    color: black;
+}
+
+/* seccion principal */
+.section-principal{
+    width: 100%;
+    height: 500px;
+    background-image: url("../assets/img/bmw-background.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: 120%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-principal h1{
+    font-size: 40px;
+}
+
+.section-principal div button{
+    all: unset;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: 1px solid blue;
+}
+
+/* active : mientras mantenga presionado el boton */
+.section-principal div button:active{
+    color: white;
+    background-color: blue;
+}
+
+/* productos */
+/* hover : es una pseudoclase que funciona solamente cuando el usuario pasa el cursor
+por encima del elemento */
+/* siempre por debajo de la etiqueta */
+.navbar li a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+.productos-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.card {
+    width: 250px;
+    height: 300px;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+    height: 15.625rem;
+    object-fit: contain;
+
+    /* escala de grises */
+    /* filter: grayscale(2); */
+    /* difuminado */
+    filter: blur(1px);
+}
+/* Cuando pasemos el mouse por encima de la imagen, se le quitaran los filtros*/
+.card img:hover{
+    filter: none;
+}
+
+/* nth-child() : nos permite trabajar sobre un item hijo en específico */
+.productos-container .card:nth-child(2){
+    background-color: lightblue;
+}
+
+.productos-container .card:nth-child(5){
+    background-color: lightsalmon;
+}
+
+.productos-container .card:nth-child(5) h3{
+    color: white;
+}
+
+.productos-container .card:first-child{
+    background-color: lightgray;
+}
+
+.productos-container .card:last-child{
+    background-color: lightyellow;
+}
+
+.parrafos{
+    display: flex;
+}
+
+.parrafos p:not(.not-today){
+    background-color: blue;
+    color: white;
+}
+
+/* 
+pseudo elementos :
+
+funcionan para darle mas propiedades a una etiqueta especifica y nos sirve para
+dar estilos a lugares de la etiqueta donde seria complicado acceder.
+*/
+
+/* nos permite trabjar con solo la primera letra */
+h1::first-letter{
+    font-size: 60px;
+}
+
+/* before */
+/* after */
+/* nos permite colocar antes/despues texto, imagenes, etc*/
+/* esto que se genera no es html (no se puede seleccionar) */
+/* h1::before{
+    content: "La mejor 😊";
+    color: greenyellow;
+} */
+
+/* Cuando pasemos por encima el raton (hover) se muestra el pseudoelemento */
+h1:hover::before{
+    content: "La mejor 😊";
+    color: greenyellow;
+}
+
+h1:hover::after{
+    content: "❤️";
+    background-color: lightcoral;
+}
+
+/* pseudoelemento para placeholder */
+input::placeholder{
+    text-align: center;
+}
+
+/* pseudoelemento para el subrayado de los parrafos */
+p::selection{
+    color: red;
+    background-color: black;
+}
+
+
+/* 
+BEM : 
+
+pensado para proyectos grandes donde trabajan más de 2 colaboradores
+es una documentacion y consenso entre los participantes. (Convencion)
+
+bloque : contenedor padre del codigo
+elemento : el hijo que va a ser afectado
+modificador : la modificacion exacta que se va a aplicar
+
+en proyectos chicos renta más usar notacionCamelCase o notacion-kebab
+*/
+
+/* .header__nav .nav__ul--flex{
+
+} */
+/* es mucho más largo de esta manera */

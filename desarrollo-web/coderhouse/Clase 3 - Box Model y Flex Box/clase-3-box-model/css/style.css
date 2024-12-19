@@ -1,0 +1,55 @@
+/*
+BOX MODELING
+permite generar, a un elemento, más espacio dentro del documento html
+
+todas las estiquetas que usemos en el docuemtno van a ocupar un espacio. el espacio puede ser: 
+interno, externo y hasta se puede limitar.
+*/
+
+.boton{
+    /* padding: 20px; */
+
+    /* padding-top: 40px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    padding-left: 32px; */
+
+    /* padding: 20px 0px 15px  10px; */
+
+    padding: 20px 30px;
+    /* width: 400px;   /*Con esto, si se modifica el espacio que ocupan las letras dentro del boton: 400 = margin + border + padding + espacio de las letras */
+    /* height: 100px;  /*height = margin + border + padding + espacio letras */
+
+    /* border: ; */
+
+    /* border-color: red;
+    border-width: 3px;
+    border-style: solid; */
+
+    border: 2px solid red;
+    border-bottom: 3px dotted blue;
+
+    background-color: lightblue;
+
+    /* margin: ; */
+    /* Tiene la misma sintaxis que padding */
+    margin: 10px 20px 40px 15px;
+}
+
+.botonFalso{
+    /* lo hacemos parecer un boton */
+    background-color: lightblue;
+    text-decoration: none;
+    color: white;
+
+    /* box modeling */
+    padding: 20px 40px;
+    border: 1px solid rgb(138, 203, 225);
+    /* margin: 10px 20px 5px 15px; */
+
+    border-radius: 10px 5px 50% 5px;    /*izq arriba, der arriba, der abajo, izq abajo*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.326);  /*le da sombra al contenedor*/
+
+    /* overflow: hidden; */
+    /* line-height: 400px; */
+}

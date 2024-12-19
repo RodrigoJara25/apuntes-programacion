@@ -1,0 +1,35 @@
+.main-index{
+    background-color: gray;
+    .section-principal{
+        h1{
+            text-align: center;
+            color: map-get($map: $colores_sitio, $key: color1);
+            font-size: map-get($map: $fuentes_sitio, $key: lg);
+        }
+    }
+}
+
+/*
+EXTENDS: volver a utilizar un bloque de codigo de css
+
+Ejem: tengo otra clase quiero que tenga las mismas propiedades, pero que cambie solo el color
+*/
+
+.ejemplo1{
+    background-color: blue;
+    font-size: 1.875rem;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+    box-shadow: 2px 2px 2px black;
+}
+
+.ejemplo2{
+    @extend .ejemplo1;
+    color: black;
+}
+
+.ejemplo3{
+    @extend .ejemplo2;
+    text-align: right;
+}

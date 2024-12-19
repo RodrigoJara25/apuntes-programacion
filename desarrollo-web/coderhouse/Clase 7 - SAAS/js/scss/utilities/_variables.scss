@@ -1,0 +1,21 @@
+/*
+
+variable = espacio de memoria reservado para almacenar un tipo de dato,
+este tipo de dato puede variar.
+
+En CSS se pueden declarar variables
+:roor => esto sirve solamente para css.
+:root{
+    --color-primario: red;
+    
+}
+
+Pero no lo usamos mucho, porque hacen más pesados los CSS
+Pero si usamos variables a través de SCSS, al ser un pre-procesador,
+y al devolver todo en CSS limpio, no fuerza nada.
+
+*/
+
+// Variables en SCSS
+$color_prinicpal: rgb(3, 3, 3);
+$color_texto: rgb(229, 244, 20);

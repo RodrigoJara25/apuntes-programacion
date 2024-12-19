@@ -1,0 +1,33 @@
+/*
+las funciones nos pemriten a nostros generar bloques de codigo
+que cumplen una determinada orden
+
+los mixin funcionan igual, los mixin poseen propiedas que 
+trabajn en conjunto para cumplir una determinada orden
+
+estatico: el mixing cumple una funcion dada por el programador
+dinamico: el mixing va modificandose dependiendo los valores que aplique el programador
+
+@mixing "nombre_mixing"{
+
+    propiedades
+}
+*/
+
+// Mixing estatico
+@mixin flex_estatico{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+// Mixing dinamico: tiene parametros que da el programdor
+@mixin flex_dinamico($direcction, $justify, $align, $gap){
+    display: flex;
+    flex-direction: $direcction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

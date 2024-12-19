@@ -1,0 +1,31 @@
+/*
+siempre tenemos que llamar primero a los partials que estan en utilities
+*/
+@import "./utilities/variables";
+@import "./utilities/maps";
+@import "./utilities/mixins";
+
+/*
+se llama todo lo que este en base
+*/
+@import "./base/reset";
+
+/*
+llamamos a todo lo que esté en layout
+*/
+@import "./layout/header";
+@import "./layout/main-index";
+
+/*
+los componentes
+*/
+@import "./components/navbar";
+@import "./components/card";
+
+/*
+siempre al final, los mediaquery
+si hacemos desde desktop hacia mobile, el orden de los MQ es de manera creciente
+Si hacemos de mobile a desktop, el orden es de manera decreciente
+*/
+@import "./layout/mediaQ/media320"
+

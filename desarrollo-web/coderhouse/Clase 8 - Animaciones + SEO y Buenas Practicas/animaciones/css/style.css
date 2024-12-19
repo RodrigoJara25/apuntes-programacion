@@ -1,0 +1,179 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+
+transformaciones => transform nos sirve para poder modificar la apariencia de elementos
+                    en 2d y 3d sin alterar el flujo natural del documento.
+
+traslacion => translate nos permite mover un elemento en direccion horizontal y vertical
+rotaciones => rotate nos permite rotar el elemento en su centro
+escalado => scale nos permite cambiar el tamaño del elemento
+inclinar el elemento => skew nos inclina el elemento de manera horizontal o vertical 
+
+*/
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0px;
+  list-style: none;
+}
+.navbar li {
+  /* SCALE */
+}
+.navbar li:hover {
+  transform: scale(1.2);
+}
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5625rem;
+}
+.navbar li a:hover {
+  color: red;
+}
+
+/* 
+TRANSITION => nos permite mainupular el tiempo de ejecución de una animación 
+y siempre ocurre cuando un elemento es pasado por el mouse (hover)
+
+transition: propiedad que quiere que se afecte.
+duracion: 
+la velocidad = tiempo de inicio y fin
+delay (opcional)
+
+*/
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(to right, #f61d32, #ff618f, #fe9ed4, #f2d3f8, #ffffff);
+}
+.principal h1 {
+  font-size: 40px;
+  /* TRANSLATE */
+  /* nos permite mover los elementos */
+  /*transform: translateX(50%);
+  &:hover{
+      transform: translateY(-300px);
+  }*/
+  /* SKEW */
+  transform: skew(10deg);
+}
+.principal img {
+  width: 31.25rem;
+  filter: drop-shadow(2px 2px 4px white);
+  /* ROTATE */
+  transform: rotate(-30deg);
+  /* TRANSITION */
+}
+.principal img:nth-child(1) {
+  transform: rotate(30deg);
+}
+.principal img:hover {
+  transform: rotate(-30deg);
+  transition: transform 5s cubic-bezier(0.17, 0.67, 1, 0.62);
+}
+
+.card-container {
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  padding: 20px 0px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px gray;
+}
+.card-container div {
+  overflow: hidden;
+}
+.card-container div img {
+  width: 100%;
+  height: 50%;
+  object-fit: contain;
+  /* propiedad filter */
+  filter: drop-shadow(2px 2px 4px orange);
+  /* SCALE */
+}
+.card-container div img:hover {
+  transform: scale(1.2);
+  filter: none;
+}
+
+/* TRANSITION */
+.cuadrado {
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+}
+.cuadrado:hover {
+  width: 500px;
+  height: 600px;
+  transition: all 5s ease-in;
+}
+
+.imagen-animacion {
+  width: 31.25rem;
+  animation-name: movimiento;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-delay: 3s;
+}
+
+@keyframes movimiento {
+  0% {
+    transform: rotate(10deg);
+    filter: grayscale(4);
+  }
+  10% {
+    transform: rotate(20deg);
+    filter: grayscale(0);
+  }
+  20% {
+    transform: rotate(30deg);
+    filter: grayscale(4);
+  }
+  30% {
+    transform: rotate(40deg);
+    filter: grayscale(0);
+  }
+  40% {
+    transform: rotate(50deg);
+    filter: grayscale(4);
+  }
+}
+/* ANIMISTA */
+.shadow-inset-center {
+  -webkit-animation: shadow-inset-center 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s infinite alternate both;
+  animation: shadow-inset-center 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s infinite alternate both;
+}
+
+@-webkit-keyframes shadow-inset-center {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes shadow-inset-center {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 14px 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

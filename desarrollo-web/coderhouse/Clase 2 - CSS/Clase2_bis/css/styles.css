@@ -1,0 +1,93 @@
+/*
+comentarios en css 
+Llaves se hacen con ctrl + k +v
+*/
+
+p{
+    color: yellowgreen;
+}
+p{
+    color: yellow;
+}
+p{
+    color: red;
+}
+
+header{
+    background-color: lightblue;
+}
+
+section{
+    background-color: lightblue;
+    color:white;
+}
+
+section p{
+    color: green;
+}
+
+section div{
+    background-color: blue;
+}
+
+section div p{
+    color: white;
+}
+
+/* selectores class - id 
+
+class => clases lo que poseen es la facultad de repetirlas tantas
+veces como sean necesarias
+Para llamar una clase se pone primero un . y se sigue con
+la palabra
+
+id => solamente se puede declarar y utilizar, 
+una sola vez en todo el proyecto. Se utiliza 
+principalmente para conectarnos con javascript
+
+existen varias nomenclaturas que se utilizan en programacion que
+estan estandarizadas y se usan para que podamos tener
+un codigo mas limpio y legible.
+en este caso las clases y ids suelen hacer referencia 
+a los bloques de codigo que se quieren representar.
+
+seccion principal
+
+camelCase = seccionPrincipal        miPrimeraClaseEnDesarrolloWeb
+kebab = seccion-principal        
+snake_case = seccion_principal
+bem = bloque elemento modificador (luego lo vemos)
+*/
+
+.seccionPrincipal{
+    background-color: lightcoral;
+}
+
+.seccionPrincipal h2{
+    background-color: red;
+    text-align: center;
+}
+
+.seccionPrincipalDiv{
+    background-color: green;
+}
+
+#mataTodo{
+    background-color: bisque;
+}
+
+.seccionPrincipal h1{
+    color: black;
+    text-align: center;
+    text-decoration: line-through;
+    letter-spacing: 10px; 
+    word-spacing: 20px;
+    font-size: 30px;
+    text-shadow: 10px 5px 5px black;
+}
+
+/*
+Medidas estandares en programacion web
+pixeles = px, 
+
+*/
