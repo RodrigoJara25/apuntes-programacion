@@ -25,7 +25,7 @@ console.log(contenedores[1].innerHTML);
 console.log(contenedores[2].innerHTML);
 
 
-
+// Recorre un conjunto de nodos (si se tiene un array)
 for(const div of contenedores){
     console.log(div)
 }
@@ -65,7 +65,7 @@ console.log(listaPaises.classList)
 // CREAR Y AGREGAR ELEMENTOS (YA NO REEMPLAZAR)
 const contenedorPaises = document.getElementById("listaPaises")
 
-const lista = document.createElement("ul")  // le agrega un <ul> como hijo al <div>
+const lista = document.createElement("ul")  // creamos un elemento <ul>
 
 contenedorPaises.append(lista)  // se lo agregamos al <div> como hijo
 
@@ -78,7 +78,7 @@ const paises = ["AR", "CL", "UY", "MX", "PR", "BL", "BR", "PE", "CL", "VN"]
 }) */
 
 
-// ELIMINAR NODOS (elimina el nodo "lista", que representa al <ul> por lo quie ya no pdoemos agregar <li>)
+// ELIMINAR NODOS (elimina el nodo "lista", que representa al <ul> por lo que ya no pdoemos agregar <li>)
 // lista.remove()
 
 
@@ -100,7 +100,7 @@ console.log(plantilla)
 
 
 // EJEMPLO 2: agregar elementos con templete string
-paises.forEach(pais=>{
+paises.forEach(pais=>{  // recorremos la lista "paises", por cada elemento hacemos un innerHTML con plantillas literales
     lista.innerHTML += `<li class="paises">${pais}</li>`
 })
 

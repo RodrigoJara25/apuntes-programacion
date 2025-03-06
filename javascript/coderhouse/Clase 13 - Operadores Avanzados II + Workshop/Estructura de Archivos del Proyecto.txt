@@ -1,0 +1,18 @@
+Estructura de Archivos del Proyecto: 
+- assets
+	- images (carpeta)
+- classes (carpeta)
+- scripts (carpeta)
+	- helpers (carpeta)
+	- utils (carpeta) 
+	- controllers (carpeta) -> Para controllers (un .js para cada pagina que necesite de js diferente al index.html)
+- constants (carpeta)
+- mocks (carpeta)
+- pages (carpeta) -> Desarrollo Web
+index.html
+
+
+Para llamar en el HTML:
+ - Constants
+ - Classes
+ - Scripts

@@ -1,0 +1,10 @@
+IDEA PROYECTO DE JAVASCRIPT
+
+2. Estimación de costos: para la estimación de costos en servicios, por ejemplo, un
+local de venta de inmuebles que te permita escoger los elementos para un
+ambiente y obtener un presupuesto, o bien la cantidad de metros cuadrados para
+pintar, el trabajo de jardinería cómo parte de un servicio de embellecimiento de
+paisajes, etc.
+
+16. Sistema de inventario Básico: Una aplicación sencilla para agregar, editar y
+eliminar productos en un inventario.
